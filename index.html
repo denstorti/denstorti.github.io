@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+  <link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
+</head>
+
+<body>
+
+  <div ng-app="myShoppingList" ng-cloak class="w3-card-2 w3-margin" style="max-width:400px;">
+    <h3 class="w3-container w3-padding">My Shopping List</h3>
+    <div ng-controller="myCtrl">
+      <ul class="w3-ul">
+        <li ng-repeat="p in products" class="w3-padding-hor-16">
+          {{p}} <span ng-click="removeItem($index)" class="w3-right w3-margin-right">&times;</span>
+        </li>
+
+      </ul>
+      <div class="w3-container">
+        <div class="w3-col s10">
+          <input type="text" placeholder="Add shopping items here" name="newProduct" ng-model="addMe" class="w3-input w3-border w3-padding">
+        </div>
+        <div class="w3-col s2">
+          <input type="button" name="addItem" ng-click="addItem(addMe)" value="Add Item" class="w3-btn w3-padding w3-right w3-green w3-ripple">
+        </div>
+      </div>
+      <p class="w3-padding-left w3-text-red">{{errortext}}</p>
+    </div>
+  </div>
+
+  <script src="controller.js"></script>
+</body>
+
+</html><!DOCTYPE html>
+<html>
+
+<head>
+  <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+  <link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
+</head>
+
+<body>
+
+  <div ng-app="myShoppingList" ng-cloak class="w3-card-2 w3-margin" style="max-width:400px;">
+    <h3 class="w3-container w3-padding">My Shopping List</h3>
+    <div ng-controller="myCtrl">
+      <ul class="w3-ul">
+        <li ng-repeat="p in products" class="w3-padding-hor-16">
+          {{p}} <span ng-click="removeItem($index)" class="w3-right w3-margin-right">&times;</span>
+        </li>
+
+      </ul>
+      <div class="w3-container">
+        <div class="w3-col s10">
+          <input type="text" placeholder="Add shopping items here" name="newProduct" ng-model="addMe" class="w3-input w3-border w3-padding">
+        </div>
+        <div class="w3-col s2">
+          <input type="button" name="addItem" ng-click="addItem(addMe)" value="Add Item" class="w3-btn w3-padding w3-right w3-green w3-ripple">
+        </div>
+      </div>
+      <p class="w3-padding-left w3-text-red">{{errortext}}</p>
+    </div>
+  </div>
+
+  <script src="controller.js"></script>
+</body>
+
+</html>
